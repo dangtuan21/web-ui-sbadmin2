@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.23",
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "classnames": "^2.2.5",
+    "dotenv": "^5.0.1",
+    "fullcalendar-reactwrapper": "^1.0.7",
+    "graphql": "^14.0.2",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.0",
+    "mongoose": "^5.1.2",
+    "react": "^16.3.1",
+    "react-apollo": "^2.3.3",
+    "react-bootstrap": "^0.32.4",
+    "react-bootstrap-date-time-picker": "0.0.3",
+    "react-dom": "^16.3.1",
+    "react-moment": "^0.7.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^2.1.2",
+    "react-select": "^1.2.1",
+    "react-time-picker": "^2.4.2",
+    "store-js": "^2.0.4",
+    "truffle-contract": "^3.0.6",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^0.19.1"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "aws s3 cp --recusive ./build s3://td-p2p-lending.com",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
