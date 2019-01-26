@@ -1,11 +1,28 @@
 import React, { Component } from "react";
 
 class NavbarTopRight extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.toggleClass= this.toggleClass.bind(this);
+        this.state = {
+          activeIndex: 0
+        }
+    }
+
+    toggleClass(index, e) {
+        if(index === this.state.activeIndex) {
+            this.setState({ activeIndex: 0 });
+        } else {
+            this.setState({ activeIndex: index });
+        }
+    };
+
     render() {
         const authContent =
             <ul className="nav navbar-top-links navbar-right">
-                <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="/#">
+                <li className={"dropdown " + ( this.state.activeIndex===1 ? 'open': '' )} onClick={this.toggleClass.bind(this, 1)} >
+                    <a className="dropdown-toggle" href="/#">
                         <i className="fa fa-envelope fa-fw"></i> <i className="fa fa-caret-down"></i>
                     </a>
                     <ul className="dropdown-menu dropdown-messages">
@@ -55,8 +72,8 @@ class NavbarTopRight extends Component {
                     {/* <!-- /.dropdown-messages --> */}
                 </li>
                 {/* <!-- /.dropdown --> */}
-                <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="/#">
+                <li className={"dropdown " + ( this.state.activeIndex === 2 ? 'open': '' )} onClick={this.toggleClass.bind(this, 2)} >
+                    <a className="dropdown-toggle" href="/#">
                         <i className="fa fa-tasks fa-fw"></i> <i className="fa fa-caret-down"></i>
                     </a>
                     <ul className="dropdown-menu dropdown-tasks">
@@ -136,8 +153,8 @@ class NavbarTopRight extends Component {
                     {/* <!-- /.dropdown-tasks --> */}
                 </li>
                 {/* <!-- /.dropdown --> */}
-                <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="/#">
+                <li className={"dropdown " + (this.state.activeIndex === 3 ? 'open': '')} onClick={this.toggleClass.bind(this, 3)} >
+                    <a className="dropdown-toggle" href="/#">
                         <i className="fa fa-bell fa-fw"></i> <i className="fa fa-caret-down"></i>
                     </a>
                     <ul className="dropdown-menu dropdown-alerts">
@@ -196,8 +213,8 @@ class NavbarTopRight extends Component {
                     {/* <!-- /.dropdown-alerts --> */}
                 </li>
                 {/* <!-- /.dropdown --> */}
-                <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="/#">
+                <li className={"dropdown " + (this.state.activeIndex === 4 ? 'open': '')} onClick={this.toggleClass.bind(this, 4)} >
+                    <a className="dropdown-toggle" href="/#">
                         <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
                     </a>
                     <ul className="dropdown-menu dropdown-user">
