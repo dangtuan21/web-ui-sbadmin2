@@ -112,16 +112,15 @@ body {
     }
 }
 
-.sidebar .arrow {
-    float: right;
+.sidebar .open {
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    transition: all .5s linear;
 }
-
-.sidebar .fa.arrow:before {
-    content: "\f104";
-}
-
-.sidebar .active > a > .fa.arrow:before {
-    content: "\f107";
+  
+.sidebar .active > .open {
+    max-height: 400px;
 }
 
 .sidebar .nav-second-level li,
@@ -255,19 +254,19 @@ table.dataTable thead .sorting_desc_disabled {
 table.dataTable thead .sorting_asc:after {
     content: "\f0de";
     float: right;
-    font-family: fontawesome;
+    font-family: "Font Awesome 5 Brands";
 }
 
 table.dataTable thead .sorting_desc:after {
     content: "\f0dd";
     float: right;
-    font-family: fontawesome;
+    font-family: "Font Awesome 5 Brands";
 }
 
 table.dataTable thead .sorting:after {
     content: "\f0dc";
     float: right;
-    font-family: fontawesome;
+    font-family: "Font Awesome 5 Brands";
     color: rgba(50,50,50,.5);
 }
 

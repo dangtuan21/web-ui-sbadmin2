@@ -1,6 +1,30 @@
 import React, { Component } from "react";
 
 class Sidebar extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.toggleClass= this.toggleClass.bind(this);
+        this.state = {
+          activeIndex: 0,
+          caret: 'fa-angle-left'
+        }
+    }
+
+    toggleClass(index, e) {
+        if(index === this.state.activeIndex) {
+            this.setState({ 
+                activeIndex: 0,
+                caret: 'fa-angle-left'
+            });
+        } else {
+            this.setState({ 
+                activeIndex: index,
+                caret: 'fa-angle-down'
+            });
+        }
+    };
+
     render() {
         const authContent =
             <div className="navbar-default sidebar" role="navigation">
@@ -20,9 +44,9 @@ class Sidebar extends Component {
                         <li>
                             <a href="/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <li>
-                            <a href="/#"><i className="fa fa-bar-chart-o fa-fw"></i> Charts<span className="fa arrow"></span></a>
-                            <ul className="nav nav-second-level">
+                        <li className={this.state.activeIndex===1 ? 'active': ''} onClick={this.toggleClass.bind(this, 1)}>
+                            <a href="/#"><i className="fa fa-bar-chart fa-fw"></i> Charts<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="flot.html">Flot Charts</a>
                                 </li>
@@ -38,9 +62,9 @@ class Sidebar extends Component {
                         <li>
                             <a href="/forms"><i className="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
-                        <li>
-                            <a href="/#"><i className="fa fa-wrench fa-fw"></i> UI Elements<span className="fa arrow"></span></a>
-                            <ul className="nav nav-second-level">
+                        <li className={this.state.activeIndex===2 ? 'active': ''} onClick={this.toggleClass.bind(this, 2)}>
+                            <a href="/#"><i className="fa fa-wrench fa-fw"></i> UI Elements<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="panels-wells.html">Panels and Wells</a>
                                 </li>
@@ -62,9 +86,9 @@ class Sidebar extends Component {
                             </ul>
                             {/* <!-- /.nav-second-level --> */}
                         </li>
-                        <li>
-                            <a href="/#"><i className="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span className="fa arrow"></span></a>
-                            <ul className="nav nav-second-level">
+                        <li className={this.state.activeIndex===3 ? 'active': ''} onClick={this.toggleClass.bind(this, 3)}>
+                            <a href="/#"><i className="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="/#">Second Level Item</a>
                                 </li>
@@ -72,7 +96,7 @@ class Sidebar extends Component {
                                     <a href="/#">Second Level Item</a>
                                 </li>
                                 <li>
-                                    <a href="/#">Third Level <span className="fa arrow"></span></a>
+                                    <a href="/#">Third Level <span className="fa pull-right"></span></a>
                                     <ul className="nav nav-third-level">
                                         <li>
                                             <a href="/#">Third Level Item</a>
@@ -92,9 +116,9 @@ class Sidebar extends Component {
                             </ul>
                             {/* <!-- /.nav-second-level --> */}
                         </li>
-                        <li>
-                            <a href="/#"><i className="fa fa-files-o fa-fw"></i> Sample Pages<span className="fa arrow"></span></a>
-                            <ul className="nav nav-second-level">
+                        <li className={this.state.activeIndex===4 ? 'active': ''} onClick={this.toggleClass.bind(this, 4)}>
+                            <a href="/#"><i className="fa fa-files-o fa-fw"></i> Sample Pages<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="blank.html">Blank Page</a>
                                 </li>
