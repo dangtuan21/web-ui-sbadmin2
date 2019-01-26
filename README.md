@@ -1,7 +1,7 @@
 # web-ui-sbadmin2
 Requirement
 
-Jan 26
+*Jan 26*
 - sidebar: click vao cac menu ben trong, form bi giut giut
 - tables: chua show Pagination. 
 - login: anh muon thay bang cac input giong nhu o day co duoc hong? 
