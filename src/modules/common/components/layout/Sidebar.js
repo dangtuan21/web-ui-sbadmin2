@@ -7,20 +7,19 @@ class Sidebar extends Component {
         this.toggleClass= this.toggleClass.bind(this);
         this.state = {
           activeIndex: 0,
-          caret: 'fa-angle-left'
+          caretLeft: 'fa-angle-left',
+          caretDown: 'fa-angle-down'
         }
     }
 
     toggleClass(index, e) {
         if(index === this.state.activeIndex) {
             this.setState({ 
-                activeIndex: 0,
-                caret: 'fa-angle-left'
+                activeIndex: 0
             });
         } else {
             this.setState({ 
-                activeIndex: index,
-                caret: 'fa-angle-down'
+                activeIndex: index
             });
         }
     };
@@ -45,7 +44,7 @@ class Sidebar extends Component {
                             <a href="/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li className={this.state.activeIndex===1 ? 'active': ''} onClick={this.toggleClass.bind(this, 1)}>
-                            <a href="/#"><i className="fa fa-bar-chart fa-fw"></i> Charts<span className={"fa pull-right " + this.state.caret}></span></a>
+                        <a href="#"><i className="fa fa-bar-chart fa-fw"></i> Charts<span className={"fa pull-right " + (this.state.activeIndex===1 ? this.state.caretDown : this.state.caretLeft)}></span></a>
                             <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="flot.html">Flot Charts</a>
@@ -63,7 +62,7 @@ class Sidebar extends Component {
                             <a href="/forms"><i className="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
                         <li className={this.state.activeIndex===2 ? 'active': ''} onClick={this.toggleClass.bind(this, 2)}>
-                            <a href="/#"><i className="fa fa-wrench fa-fw"></i> UI Elements<span className={"fa pull-right " + this.state.caret}></span></a>
+                        <a href="#"><i className="fa fa-wrench fa-fw"></i> UI Elements<span className={"fa pull-right " + (this.state.activeIndex===2 ? this.state.caretDown : this.state.caretLeft)}></span></a>
                             <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="panels-wells.html">Panels and Wells</a>
@@ -87,7 +86,7 @@ class Sidebar extends Component {
                             {/* <!-- /.nav-second-level --> */}
                         </li>
                         <li className={this.state.activeIndex===3 ? 'active': ''} onClick={this.toggleClass.bind(this, 3)}>
-                            <a href="/#"><i className="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <a href="#"><i className="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span className={"fa pull-right " + (this.state.activeIndex===3 ? this.state.caretDown : this.state.caretLeft)}></span></a>
                             <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="/#">Second Level Item</a>
@@ -117,7 +116,7 @@ class Sidebar extends Component {
                             {/* <!-- /.nav-second-level --> */}
                         </li>
                         <li className={this.state.activeIndex===4 ? 'active': ''} onClick={this.toggleClass.bind(this, 4)}>
-                            <a href="/#"><i className="fa fa-files-o fa-fw"></i> Sample Pages<span className={"fa pull-right " + this.state.caret}></span></a>
+                            <a href="#"><i className="fa fa-files-o fa-fw"></i> Sample Pages<span className={"fa pull-right " + (this.state.activeIndex===4 ? this.state.caretDown : this.state.caretLeft)}></span></a>
                             <ul className="nav nav-second-level open">
                                 <li>
                                     <a href="blank.html">Blank Page</a>

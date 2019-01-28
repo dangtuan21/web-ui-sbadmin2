@@ -12,6 +12,7 @@
     "fullcalendar-reactwrapper": "^1.0.7",
     "graphql": "^14.0.2",
     "jwt-decode": "^2.2.0",
+    "less-watch-compiler": "^1.13.0",
     "lodash": "^4.17.10",
     "moment": "^2.22.0",
     "mongoose": "^5.1.2",
@@ -35,6 +36,7 @@
   "scripts": {
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
+    "build-css": "less-watch-compiler public/less/ public/dist/css sb-admin-2.less",
     "deploy": "aws s3 cp --recusive ./build s3://td-p2p-lending.com",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

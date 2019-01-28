@@ -8,23 +8,25 @@ class Login extends Component {
                     <div className="col-md-4 col-md-offset-4">
                         <div className="login-panel panel panel-default">
                             <div className="panel-heading">
-                                <h3 className="panel-title">Please Sign In</h3>
+                                <h3 className="panel-title">Login</h3>
                             </div>
                             <div className="panel-body">
                                 <form>
                                     <fieldset>
                                         <div className="form-group">
-                                            <input className="form-control" placeholder="E-mail" name="email" type="email" autofocus />
+                                            <input className="form-control" name="email" placeholder="Email" type="email" autofocus />
+                                            <label class="control-label">E-mail Address</label>
                                         </div>
                                         <div className="form-group">
-                                            <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                            <input className="form-control" name="password" placeholder="Password" type="password"/>
+                                            <label class="control-label">Password</label>
                                         </div>
-                                        <div className="checkbox">
+                                        <div className="checkbox mt-15">
                                             <label>
                                                 <input name="remember" type="checkbox" value="Remember Me" />Remember Me
                                     </label>
                                         </div>
-                                        <a href="index.html" className="btn btn-lg btn-success btn-block">Login</a>
+                                        <a href="index.html" className="btn btn-primary btn-block mt-20">Login</a>
                                     </fieldset>
                                 </form>
                             </div>

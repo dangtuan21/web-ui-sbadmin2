@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Pagination from "../controls/Pagination";
+
 class Tables extends Component {
     render() {
         const authContent =
@@ -432,6 +434,7 @@ class Tables extends Component {
                                         </tr>
                                     </tbody>
                                 </table>
+                                <Pagination curUrl="/tables" itemNum="30" pageSize="10" pageNo="1"/>
                                 {/* <!-- /.table-responsive --> */}
                                 <div className="well">
                                     <h4>DataTables Usage Information</h4>
@@ -445,7 +448,6 @@ class Tables extends Component {
                     </div>
                     {/* <!-- /.col-lg-12 --> */}
                 </div>
-
             </div>
         return (
             <div>

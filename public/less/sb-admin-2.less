@@ -1,5 +1,9 @@
 @import "variables.less";
 @import "mixins.less";
+@import "button.less";
+@import "checkbox.less";
+@import "textbox.less";
+@import "helpers.less";
 
 // Global Styles
 
@@ -101,6 +105,16 @@ body {
 
 .sidebar .sidebar-search {
     padding: 15px;
+
+    .custom-search-form {
+        .form-control {
+            height: 3.8rem;
+            padding: .6rem 1.2rem;
+
+            font-size: 1.4rem;
+            line-height: 20px;
+        }
+    }
 }
 
 .sidebar ul li {
@@ -545,3 +559,37 @@ table.dataTable thead .sorting:after {
         border-left-width: 0;
     }
 }
+
+// BEGIN GENERAL //
+
+label {
+    margin-bottom: 0;
+}
+
+// END GENERAL //
+
+
+
+
+// BEGIN PANEL //
+
+.panel-heading {
+    padding: 1.2rem 2rem;
+
+    .panel-title {
+        font-size: 1.6rem;
+        line-height: 24px;
+    }
+}
+
+.panel-body {
+    padding: 2rem;
+}
+
+.panel-default {
+    .panel-heading {
+        background-color: @gray-lightest;
+    }
+}
+
+// END PANEL //
