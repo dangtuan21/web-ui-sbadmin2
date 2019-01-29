@@ -2,7 +2,6 @@
 Requirement
 
 *Jan 28*
-- sidebar: click vao cac menu ben trong, form bi giut giut
 - tables: chua show Pagination. 
 ---
 *Jan 26*
