@@ -14,12 +14,12 @@ class Login extends Component {
                                 <form>
                                     <fieldset>
                                         <div className="form-group">
-                                            <input className="form-control" name="email" placeholder="Email" type="email" autofocus />
-                                            <label class="control-label">E-mail Address</label>
+                                            <input className="form-control" name="email" placeholder="Email" type="email" autoFocus />
+                                            <label className="control-label">E-mail Address</label>
                                         </div>
                                         <div className="form-group">
-                                            <input className="form-control" name="password" placeholder="Password" type="password"/>
-                                            <label class="control-label">Password</label>
+                                            <input className="form-control" name="password" placeholder="Password" type="password" />
+                                            <label className="control-label">Password</label>
                                         </div>
                                         <div className="checkbox mt-15">
                                             <label>

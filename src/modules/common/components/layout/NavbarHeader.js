@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class NavbarHeader extends Component {
     render() {
+        console.log('NavbarHeader render');
         const authContent =
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,4 +23,5 @@ class NavbarHeader extends Component {
     }
 }
 
-export default NavbarHeader;
+// export default NavbarHeader;
+export default connect(null, null)(NavbarHeader);

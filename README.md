@@ -1,7 +1,7 @@
 # web-ui-sbadmin2
 Requirement
 
-*Jan 28*
+*Jan 29*
 - tables: chua show Pagination. 
 ---
 *Jan 26*
