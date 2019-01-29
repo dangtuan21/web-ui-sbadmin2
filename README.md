@@ -2,6 +2,9 @@
 Requirement
 
 *Jan 29*
+
+---
+*Jan 28*
 - tables: chua show Pagination. 
 ---
 *Jan 26*
