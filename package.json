@@ -42,7 +42,7 @@
   "scripts": {
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
-    "build-css": "less-watch-compiler public/less/ public/dist/css sb-admin-2.less",
+    "scss": "node-sass --watch public/scss/ -o public/dist/css sb-admin-2.scss",
     "deploy": "aws s3 cp --recusive ./build s3://td-p2p-lending.com",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

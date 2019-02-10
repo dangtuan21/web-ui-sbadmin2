@@ -8,9 +8,7 @@ class Sidebar extends Component {
 
         this.toggleClass = this.toggleClass.bind(this);
         this.state = {
-            activeIndex: 0,
-            caretLeft: 'fa-angle-left',
-            caretDown: 'fa-angle-down'
+            activeIndex: 0
         }
     }
 
@@ -28,123 +26,129 @@ class Sidebar extends Component {
 
     render() {
         const authContent =
-            <div className="navbar-default sidebar" role="navigation">
-                <div className="sidebar-nav navbar-collapse">
-                    <ul className="nav" id="side-menu">
-                        <li className="sidebar-search">
-                            <div className="input-group custom-search-form">
-                                <input type="text" className="form-control" placeholder="Search..." />
-                                <span className="input-group-btn">
-                                    <button className="btn btn-default" type="button">
-                                        <i className="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                            {/* <!-- /input-group --> */}
-                        </li>
-                        <li>
-                            <Link to="/dashboard">
-                                <i className="fa fa-table fa-fw"></i> Dashboard
-                            </Link>
-                        </li>
-                        <li className={this.state.activeIndex === 1 ? 'active' : ''} onClick={this.toggleClass.bind(this, 1)}>
-                            <a href="/#"><i className="fa fa-bar-chart fa-fw"></i> Charts<span className={"fa pull-right " + (this.state.activeIndex === 1 ? this.state.caretDown : this.state.caretLeft)}></span></a>
-                            <ul className="nav nav-second-level open">
-                                <li>
-                                    <a href="flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Morris.js Charts</a>
-                                </li>
-                            </ul>
-                            {/* <!-- /.nav-second-level --> */}
-                        </li>
-                        <li>
-                            <Link to="/tables">
-                                <i className="fa fa-table fa-fw"></i> Tables
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/forms">
-                                <i className="fa fa-table fa-fw"></i> Forms
-                            </Link>
-                        </li>
-                        <li className={this.state.activeIndex === 2 ? 'active' : ''} onClick={this.toggleClass.bind(this, 2)}>
-                            <a href="/#"><i className="fa fa-wrench fa-fw"></i> UI Elements<span className={"fa pull-right " + (this.state.activeIndex === 2 ? this.state.caretDown : this.state.caretLeft)}></span></a>
-                            <ul className="nav nav-second-level open">
-                                <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Icons</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grid</a>
-                                </li>
-                            </ul>
-                            {/* <!-- /.nav-second-level --> */}
-                        </li>
-                        <li className={this.state.activeIndex === 3 ? 'active' : ''} onClick={this.toggleClass.bind(this, 3)}>
-                            <a href="/#"><i className="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span className={"fa pull-right " + (this.state.activeIndex === 3 ? this.state.caretDown : this.state.caretLeft)}></span></a>
-                            <ul className="nav nav-second-level open">
-                                <li>
-                                    <a href="/#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="/#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="/#">Third Level <span className="fa pull-right"></span></a>
-                                    <ul className="nav nav-third-level">
-                                        <li>
-                                            <a href="/#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="/#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="/#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="/#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    {/* <!-- /.nav-third-level --> */}
-                                </li>
-                            </ul>
-                            {/* <!-- /.nav-second-level --> */}
-                        </li>
-                        <li className={this.state.activeIndex === 4 ? 'active' : ''} onClick={this.toggleClass.bind(this, 4)}>
-                            <Link to="#">
-                                <i className="fa fa-files-o fa-fw"></i> Sample Pages<span className={"fa pull-right " + (this.state.activeIndex === 4 ? this.state.caretDown : this.state.caretLeft)}></span>
-                            </Link>
+            <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                            <ul className="nav nav-second-level open">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
-                                <li>
-                                    <Link to="/login">
-                                        Login Page
-                                    </Link>
-                                </li>
-                            </ul>
-                            {/* <!-- /.nav-second-level --> */}
-                        </li>
-                    </ul>
+                {/* <!-- /Sidebar - Brand --> */}
+                <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="index.html">
+                    <div className="sidebar-brand-icon rotate-n-15">
+                    <i className="fas fa-laugh-wink"></i>
+                    </div>
+                    <div className="sidebar-brand-text mx-3">SB Admin 2</div>
+                </Link>
+
+                {/* <!-- Divider --> */}
+                <hr className="sidebar-divider my-0"></hr>
+
+                {/* <!-- Nav Item - Dashboard --> */}
+                <li className="nav-item active">
+                    <Link to="/dashboard" className="nav-link">
+                        <i className="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </Link>
+                </li>
+
+                {/* <!-- Divider --> */}
+                <hr className="sidebar-divider"></hr>
+
+                {/* <!-- Heading --> */}
+                <div className="sidebar-heading">
+                    Interface
                 </div>
-                {/* <!-- /.sidebar-collapse --> */}
-            </div>
 
+                {/* <!-- Nav Item - Pages Collapse Menu --> */}
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
+                        <i className="fas fa-fw fa-cog"></i>
+                        <span>Components</span>
+                    </Link>
+                    <div id="collapseOne" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div className="bg-white py-2 collapse-inner rounded">
+                            <h6 className="collapse-header">Custom Components:</h6>
+                            <a className="collapse-item" href="buttons.html">Buttons</a>
+                            <a className="collapse-item" href="cards.html">Cards</a>
+                        </div>
+                    </div>
+                </li>
+
+                {/* <!-- Nav Item - Utilities Collapse Menu --> */}
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i className="fas fa-fw fa-wrench"></i>
+                        <span>Utilities</span>
+                    </Link>
+                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div className="bg-white py-2 collapse-inner rounded">
+                            <h6 className="collapse-header">Custom Utilities:</h6>
+                            <a className="collapse-item" href="utilities-color.html">Colors</a>
+                            <a className="collapse-item" href="utilities-border.html">Borders</a>
+                            <a className="collapse-item" href="utilities-animation.html">Animations</a>
+                            <a className="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                {/* <!-- Divider --> */}
+                <hr className="sidebar-divider"></hr>
+
+                {/* <!-- Heading --> */}
+                <div className="sidebar-heading">
+                    Addons
+                </div>
+
+                {/* <!-- Nav Item - Pages Collapse Menu --> */}
+                <li className={this.state.activeIndex === 3 ? 'active' : ''} onClick={this.toggleClass.bind(this, 3)} className="nav-item">
+                    <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+                        <i className="fas fa-fw fa-pager"></i>
+                        <span>Pages</span>
+                    </Link>
+                    <div id="collapseThree" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div className="bg-white py-2 collapse-inner rounded">
+                            <h6 className="collapse-header">Login Screens:</h6>
+                            <a className="collapse-item" href="login.html">Login</a>
+                            <a className="collapse-item" href="register.html">Register</a>
+                            <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
+                            <div className="collapse-divider"></div>
+                            <h6 className="collapse-header">Other Pages:</h6>
+                            <a className="collapse-item" href="404.html">404 Page</a>
+                            <a className="collapse-item" href="blank.html">Blank Page</a>
+                        </div>
+                    </div>
+                </li>
+
+                {/* <!-- Nav Item - Charts --> */}
+                <li className="nav-item">
+                    <Link to="/charts" className="nav-link">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Charts</span>
+                    </Link>
+                </li>
+
+                {/* <!-- Nav Item - Table --> */}
+                <li className="nav-item">
+                    <Link to="/tables" className="nav-link">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Table</span>
+                    </Link>
+                </li>
+
+                {/* <!-- Nav Item - Form --> */}
+                <li className="nav-item">
+                    <Link to="/forms" className="nav-link">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Form</span>
+                    </Link>
+                </li>
+
+                {/* <!-- Divider --> */}
+                <hr className="sidebar-divider"></hr>
+
+                {/* <!-- Sidebar Toggler (Sidebar) --> */}
+                <div className="text-center d-none d-md-inline">
+                    <button className="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+
+            </ul>
+            {/* <!-- End of Sidebar --> */}
 
         return (
             <div>

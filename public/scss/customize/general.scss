@@ -1,0 +1,33 @@
+// BEGIN GENERAL //
+
+label {
+  margin-bottom: 0;
+}
+
+// END GENERAL //
+
+
+
+
+// BEGIN PANEL //
+
+.panel-heading {
+  padding: 1.2rem 2rem;
+
+  .panel-title {
+      font-size: 1.6rem;
+      line-height: 24px;
+  }
+}
+
+.panel-body {
+  padding: 2rem;
+}
+
+.panel-default {
+  .panel-heading {
+      background-color: @gray-lightest;
+  }
+}
+
+// END PANEL //

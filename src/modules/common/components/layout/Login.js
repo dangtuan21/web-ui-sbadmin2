@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Login extends Component {
     render() {
         const authContent =
-            <div className="container">
+          
                 <div className="row">
                     <div className="col-md-4 col-md-offset-4">
                         <div className="login-panel panel panel-default">
@@ -33,7 +33,7 @@ class Login extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+          
 
         return (
             <div>
