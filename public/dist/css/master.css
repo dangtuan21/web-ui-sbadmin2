@@ -1,0 +1,97 @@
+.btn-user {
+  margin-top: 20px; }
+
+.action-container {
+  margin-top: 20px; }
+
+.checkbox,
+.radio {
+  margin: 0; }
+  .checkbox label,
+  .radio label {
+    font-size: 80%; }
+    .checkbox label input[type="checkbox"],
+    .checkbox label input[type="radio"],
+    .radio label input[type="checkbox"],
+    .radio label input[type="radio"] {
+      margin-right: 10px; }
+
+.checkbox-inline,
+.radio-inline {
+  font-size: 80%;
+  padding: 0 10px; }
+  .checkbox-inline input[type="checkbox"],
+  .checkbox-inline input[type="radio"],
+  .radio-inline input[type="checkbox"],
+  .radio-inline input[type="radio"] {
+    margin-right: 10px; }
+
+.form-group {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 10px; }
+  .form-group .form-control {
+    height: 50px;
+    padding: 12px;
+    color: #495057;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+    .form-group .form-control:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      outline: 0; }
+    .form-group .form-control :placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #FFFFFF; }
+    .form-group .form-control :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #FFFFFF; }
+    .form-group .form-control ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #FFFFFF; }
+    .form-group .form-control:not(:placeholder-shown) {
+      padding-top: 20px;
+      padding-bottom: 4px; }
+      .form-group .form-control:not(:placeholder-shown) ~ .control-label {
+        top: 6px;
+        font-size: 80%;
+        color: #999999;
+        background-color: transparent; }
+
+.form-group .control-label {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: calc(100% - 24px);
+  font-weight: 400;
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+  background-color: #FFFFFF;
+  pointer-events: none; }
+
+.bg-gradient-primary {
+  min-height: 100vh; }
+
+label {
+  margin-bottom: 0; }
+
+.sidebar {
+  height: 100%; }
+
+.bg-login-image {
+  background: url("https://images.unsplash.com/photo-1504532724559-22878efd533a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-position: center;
+  background-size: cover; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mt-20 {
+  margin-top: 20px; }

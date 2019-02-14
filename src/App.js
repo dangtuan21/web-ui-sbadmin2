@@ -33,13 +33,13 @@ class App extends Component {
                                         <Switch>
                                             <Route path="/forms" component={Forms} />
                                         </Switch>
-                                        <Switch>
-                                            <Route path="/login" component={Login} />
-                                        </Switch>
                                     </div>
                                 </div>
                             </div>
                         </div >
+                        <Switch>
+                            <Route path="/login" component={Login} />
+                        </Switch>
                     </div >
                 </Router>
             </Provider>

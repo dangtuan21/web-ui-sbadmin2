@@ -22,13 +22,13 @@ class Forms extends Component {
                                     <div className="col-lg-6">
                                         <form>
                                             <div className="form-group">
-                                                <label>Text Input</label>
-                                                <input className="form-control" />
-                                                <p className="help-block">Example block-level help text here.</p>
+                                                <input className="form-control" placeholder="text input"/>
+                                                <label className="control-label">Text Input</label>
                                             </div>
+                                            <p className="help-block">Example block-level help text here.</p>
                                             <div className="form-group">
-                                                <label>Text Input with Placeholder</label>
                                                 <input className="form-control" placeholder="Enter text" />
+                                                <label className="control-label">Text Input with Placeholder</label>
                                             </div>
                                             <div className="form-group">
                                                 <label>Static Control</label>
@@ -39,68 +39,68 @@ class Forms extends Component {
                                                 <input type="file" />
                                             </div>
                                             <div className="form-group">
-                                                <label>Text area</label>
                                                 <textarea className="form-control" rows="3"></textarea>
+                                                <label className="control-label">Text area</label>
                                             </div>
                                             <div className="form-group">
                                                 <label>Checkboxes</label>
                                                 <div className="checkbox">
                                                     <label>
                                                         <input type="checkbox" value="" />Checkbox 1
-                                                                    </label>
+                                                    </label>
                                                 </div>
                                                 <div className="checkbox">
                                                     <label>
                                                         <input type="checkbox" value="" />Checkbox 2
-                                                </label>
+                                                    </label>
                                                 </div>
                                                 <div className="checkbox">
                                                     <label>
                                                         <input type="checkbox" value="" />Checkbox 3
-                                                </label>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <label>Inline Checkboxes</label>
                                                 <label className="checkbox-inline">
                                                     <input type="checkbox" />1
-                                            </label>
+                                                </label>
                                                 <label className="checkbox-inline">
                                                     <input type="checkbox" />2
-                                            </label>
+                                                </label>
                                                 <label className="checkbox-inline">
                                                     <input type="checkbox" />3
-                                            </label>
+                                                </label>
                                             </div>
                                             <div className="form-group">
                                                 <label>Radio Buttons</label>
                                                 <div className="radio">
                                                     <label>
                                                         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />Radio 1
-                                                </label>
+                                                    </label>
                                                 </div>
                                                 <div className="radio">
                                                     <label>
                                                         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />Radio 2
-                                                </label>
+                                                    </label>
                                                 </div>
                                                 <div className="radio">
                                                     <label>
                                                         <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />Radio 3
-                                                </label>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <label>Inline Radio Buttons</label>
                                                 <label className="radio-inline">
                                                     <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" />1
-                                            </label>
+                                                </label>
                                                 <label className="radio-inline">
                                                     <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2" />2
-                                            </label>
+                                                </label>
                                                 <label className="radio-inline">
                                                     <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3" />3
-                                            </label>
+                                                </label>
                                             </div>
                                             <div className="form-group">
                                                 <label>Selects</label>
@@ -122,8 +122,10 @@ class Forms extends Component {
                                                     <option>5</option>
                                                 </select>
                                             </div>
-                                            <button type="submit" className="btn btn-default">Submit Button</button>
-                                            <button type="reset" className="btn btn-default">Reset Button</button>
+                                            <div className="action-container">
+                                                <button type="submit" className="btn btn-primary">Submit Button</button>
+                                                <button type="reset" className="btn btn-light">Reset Button</button>
+                                            </div>
                                         </form>
                                     </div>
                                     {/* <!-- /.col-lg-6 (nested) --> */}
@@ -141,17 +143,16 @@ class Forms extends Component {
                                                         <option>Disabled select</option>
                                                     </select>
                                                 </div>
-                                                <div className="checkbox">
+                                                <div className="checkbox mt-10">
                                                     <label>
                                                         <input type="checkbox" />Disabled Checkbox
                                                 </label>
                                                 </div>
-                                                <button type="submit" className="btn btn-primary">Disabled Button</button>
+                                                <div className="action-container">
+                                                    <button type="submit" className="btn btn-primary">Disabled Button</button>
+                                                </div>
                                             </fieldset>
                                         </form>
-                                        <h1>Form Validation States</h1>
-
-                                        <h1>Input Groups</h1>
 
                                         {/* <!-- /.row (nested) --> */}
                                     </div>

@@ -1,0 +1,79 @@
+// BEGIN TEXTBOX //
+
+.form-group {
+  position: relative;
+
+  margin-bottom: 0;
+  margin-top: 10px;
+
+
+  .form-control {
+    height: 50px;
+    padding: 12px;
+
+    color: $color-gray-dark;
+
+    border: 1px solid $color-gray;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &:focus {
+      border-color: $color-blue-light;
+      box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+
+      outline: 0;
+    }
+
+    :placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $color-white;
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $color-white;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: $color-white;
+    }
+
+    &:not(:placeholder-shown) {
+      padding-top: 20px;
+      padding-bottom: 4px;
+
+      ~ .control-label {
+        top: 6px;
+
+        font-size: 80%;
+        color: $gray-light;
+
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// END TEXTBOX //
+
+
+
+// BEGIN LABEL //
+
+.form-group {
+  .control-label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    width: calc(100% - 24px);
+
+    font-weight: 400;
+    text-transform: capitalize;
+
+    transition: all 0.1s ease-in-out;
+    background-color: $color-white;
+
+    pointer-events: none;
+  }
+}
+
+// END LABEL //
