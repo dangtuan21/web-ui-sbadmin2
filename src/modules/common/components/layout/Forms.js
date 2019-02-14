@@ -3,13 +3,10 @@ import React, { Component } from "react";
 class Forms extends Component {
     render() {
         const authContent =
-            <div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <h1 className="page-header">Forms</h1>
-                    </div>
-                    {/* <!-- /.col-lg-12 --> */}
-                </div>
+        <div className="container-fluid">
+                {/* <!-- Page Heading --> */}
+                <h1 className="h3 mb-4 text-gray-800">Forms</h1>
+                
                 {/* <!-- /.row --> */}
                 <div className="row">
                     <div className="col-lg-12">

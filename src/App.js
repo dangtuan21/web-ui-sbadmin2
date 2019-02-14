@@ -8,6 +8,10 @@ import Dashboard from "./modules/common/components/layout/Dashboard";
 import Tables from "./modules/common/components/layout/Tables";
 import Forms from "./modules/common/components/layout/Forms";
 import Login from "./modules/common/components/layout/Login";
+import Buttons from "./modules/common/components/layout/Buttons";
+import Cards from "./modules/common/components/layout/Cards";
+import Colors from "./modules/common/components/layout/utilities/Colors";
+import Borders from "./modules/common/components/layout/utilities/Borders";
 
 import "./App.css";
 import store from './store';
@@ -28,10 +32,22 @@ class App extends Component {
                                             <Route path="/dashboard" component={Dashboard} />
                                         </Switch>
                                         <Switch>
+                                            <Route path="/cards" component={Cards} />
+                                        </Switch>
+                                        <Switch>
+                                            <Route path="/buttons" component={Buttons} />
+                                        </Switch>
+                                        <Switch>
                                             <Route path="/tables" component={Tables} />
                                         </Switch>
                                         <Switch>
                                             <Route path="/forms" component={Forms} />
+                                        </Switch>
+                                        <Switch>
+                                            <Route path="/utilities-color" component={Colors} />
+                                        </Switch>
+                                        <Switch>
+                                            <Route path="/utilities-border" component={Borders} />
                                         </Switch>
                                     </div>
                                 </div>

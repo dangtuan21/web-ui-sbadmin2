@@ -4,9 +4,6 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 class Tables extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         var products = [
             {
@@ -65,7 +62,7 @@ class Tables extends Component {
                 <BootstrapTable
                     data={ products }
                     pagination>
-                    <TableHeaderColumn isKey dataField='id' isKey>Product ID</TableHeaderColumn>
+                    <TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn>
                     <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
                     <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
                 </BootstrapTable>

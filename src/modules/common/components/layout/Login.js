@@ -59,7 +59,7 @@ class Login extends Component {
       
 
         return (
-            <div className="bg-gradient-primary">
+            <div className="bg-gradient-primary min-h">
                 {authContent}
             </div>
         )

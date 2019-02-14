@@ -5,29 +5,15 @@ import { Link } from "react-router-dom";
 class Sidebar extends Component {
     constructor(props) {
         super(props)
-
-        this.toggleClass = this.toggleClass.bind(this);
         this.state = {
             open: false
         }
     }
 
-    toggleClass(index, e) {
-        if (index === this.state.activeIndex) {
-            this.setState({
-                activeIndex: 0
-            });
-        } else {
-            this.setState({
-                activeIndex: index
-            });
-        }
-    };
-
     render() {
         const { open } = this.state;
         const authContent =
-            <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" role="navigation">
+            <ul className={"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " + (open===true ? "toggled" : "")} id="accordionSidebar" role="navigation">
 
                 {/* <!-- /Sidebar - Brand --> */}
                 <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="index">
@@ -57,35 +43,38 @@ class Sidebar extends Component {
                 </div>
 
                 {/* <!-- Nav Item - Pages Collapse Menu --> */}
+                <li className="nav-item d-none">
+                    <a className={"nav-link " + (open===true ? " " : "collapsed")} href="/#" data-toggle="collapse" aria-controls="collapseTwo" onClick={() => this.setState({ open: !open })} aria-expanded={open}>
+                    </a>
+                </li>
+
                 <li className="nav-item">
-                    <a className={"nav-link " + (open===true ? " " : "collapsed")} href="#" data-toggle="collapse" aria-expanded="true" aria-controls="collapseTwo" onClick={() => this.setState({ open: !open })}
-          aria-controls="example-collapse-text"
-          aria-expanded={open}>
+                <a className="nav-link collapsed" href="/#" data-toggle="collapse" data-target="#collapseComponents" aria-expanded="true" aria-controls="collapseComponents">
                         <i className="fas fa-fw fa-cog"></i>
                         <span>Components</span>
                     </a>
-                    <div id="collapseTwo" className={"collapse " + (open===true ? "show" : " ")}>
+                    <div id="collapseComponents" className="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Components:</h6>
-                            <a className="collapse-item" href="buttons">Buttons</a>
-                            <a className="collapse-item" href="cards">Cards</a>
+                            <a className="collapse-item" href="/buttons">Buttons</a>
+                            <a className="collapse-item" href="/cards">Cards</a>
                         </div>
                     </div>
                 </li>
 
                 {/* <!-- Nav Item - Utilities Collapse Menu --> */}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <a className="nav-link collapsed" href="/#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                         <i className="fas fa-fw fa-wrench"></i>
                         <span>Utilities</span>
                     </a>
                     <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Utilities:</h6>
-                            <a className="collapse-item" href="utilities-color">Colors</a>
-                            <a className="collapse-item" href="utilities-border">Borders</a>
-                            <a className="collapse-item" href="utilities-animation">Animations</a>
-                            <a className="collapse-item" href="utilities-other">Other</a>
+                            <a className="collapse-item" href="/utilities-color">Colors</a>
+                            <a className="collapse-item" href="/utilities-border">Borders</a>
+                            <a className="collapse-item" href="/utilities-animation">Animations</a>
+                            <a className="collapse-item" href="/utilities-other">Other</a>
                         </div>
                     </div>
                 </li>
@@ -100,7 +89,7 @@ class Sidebar extends Component {
 
                 {/* <!-- Nav Item - Pages Collapse Menu --> */}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <a className="nav-link collapsed" href="/#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                         <i className="fas fa-fw fa-pager"></i>
                         <span>Pages</span>
                     </a>
@@ -147,12 +136,9 @@ class Sidebar extends Component {
 
                 {/* <!-- Sidebar Toggler (Sidebar) --> */}
                 <div className="text-center d-none d-md-inline">
-                    <button className="rounded-circle border-0" id="sidebarToggle"></button>
+                    <button className="rounded-circle border-0" id="sidebarToggle" onClick={() => this.setState({ open: !open })} ></button>
                 </div>
-
             </ul>
-            {/* <!-- End of Sidebar --> */}
-
         return (
             <div>
                 {authContent}
