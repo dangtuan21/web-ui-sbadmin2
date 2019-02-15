@@ -18,16 +18,16 @@ class Login extends Component {
                         <form className="user">
                           <div className="form-group">
                             <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." />
-                            <label for="exampleInputEmail" className="control-label">E-mail Address</label>
+                            <label htmlFor="exampleInputEmail" className="control-label">E-mail Address</label>
                           </div>
                           <div className="form-group">
                             <input type="password" className="form-control" id="exampleInputPassword" placeholder="Password" />
-                            <label for="exampleInputPassword" className="control-label">Password</label>
+                            <label htmlFor="exampleInputPassword" className="control-label">Password</label>
                           </div>
                           <div className="form-group">
                             <div className="custom-control custom-checkbox small">
                               <input type="checkbox" className="custom-control-input" id="customCheck" />
-                              <label className="custom-control-label" for="customCheck">Remember Me</label>
+                              <label className="custom-control-label" htmlFor="customCheck">Remember Me</label>
                             </div>
                           </div>
                           <a href="index.html" className="btn btn-primary btn-user btn-block">
