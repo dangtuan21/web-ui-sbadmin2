@@ -27,8 +27,8 @@ class Sidebar extends Component {
                 <hr className="sidebar-divider my-0"></hr>
 
                 {/* <!-- Nav Item - Dashboard --> */}
-                <li className="nav-item active">
-                    <Link to="/dashboard" className="nav-link">
+                <li className="nav-item ">
+                    <Link to="/" className="nav-link">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span>
                     </Link>
@@ -56,8 +56,8 @@ class Sidebar extends Component {
                     <div id="collapseComponents" className="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Components:</h6>
-                            <a className="collapse-item" href="/buttons">Buttons</a>
-                            <a className="collapse-item" href="/cards">Cards</a>
+                            <Link className="collapse-item" to="buttons">Buttons</Link>
+                            <Link className="collapse-item" to="cards">Cards</Link>
                         </div>
                     </div>
                 </li>
@@ -71,10 +71,10 @@ class Sidebar extends Component {
                     <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Utilities:</h6>
-                            <a className="collapse-item" href="/utilities-color">Colors</a>
-                            <a className="collapse-item" href="/utilities-border">Borders</a>
-                            <a className="collapse-item" href="/utilities-animation">Animations</a>
-                            <a className="collapse-item" href="/utilities-other">Other</a>
+                            <Link className="collapse-item" to="/utilities-color">Colors</Link>
+                            <Link className="collapse-item" to="/utilities-border">Borders</Link>
+                            <Link className="collapse-item" to="utilities-animation">Animations</Link>
+                            <Link className="collapse-item" to="utilities-other">Other</Link>
                         </div>
                     </div>
                 </li>
@@ -96,13 +96,13 @@ class Sidebar extends Component {
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Login Screens:</h6>
-                            <a className="collapse-item" href="/login">Login</a>
-                            <a className="collapse-item" href="/register">Register</a>
-                            <a className="collapse-item" href="/forgot-password">Forgot Password</a>
+                            <Link to="/login" className="collapse-item">Login</Link>
+                            <Link to="/register" className="collapse-item">Register</Link>
+                            <Link to="/forgot-password" className="collapse-item">Forgot Password</Link>
                             <div className="collapse-divider"></div>
                             <h6 className="collapse-header">Other Pages:</h6>
-                            <a className="collapse-item" href="/404">404 Page</a>
-                            <a className="collapse-item" href="/blank">Blank Page</a>
+                            <Link to="/404" className="collapse-item">404 Page</Link>
+                            <Link to="/blank" className="collapse-item">Blank Page</Link>
                         </div>
                     </div>
                 </li>

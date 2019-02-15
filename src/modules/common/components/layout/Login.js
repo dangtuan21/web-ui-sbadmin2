@@ -18,11 +18,11 @@ class Login extends Component {
                         <form className="user">
                           <div className="form-group">
                             <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." />
-                            <label className="control-label">E-mail Address</label>
+                            <label for="exampleInputEmail" className="control-label">E-mail Address</label>
                           </div>
                           <div className="form-group">
                             <input type="password" className="form-control" id="exampleInputPassword" placeholder="Password" />
-                            <label className="control-label">Password</label>
+                            <label for="exampleInputPassword" className="control-label">Password</label>
                           </div>
                           <div className="form-group">
                             <div className="custom-control custom-checkbox small">

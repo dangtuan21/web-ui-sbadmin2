@@ -58,7 +58,7 @@ class Tables extends Component {
           ];
 
         const authContent =
-            <div>
+            <div className="container-fluid">
                 <BootstrapTable
                     data={ products }
                     pagination>
