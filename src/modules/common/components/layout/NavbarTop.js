@@ -1,7 +1,28 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 
 class NavbarTop extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            loggedInUser: ''
+        }
+    }
+    componentDidMount() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if(loggedInUser) {
+            this.setState({
+                loggedInUser
+            });    
+        }
+        else 
+            this.props.history.push('/login');
+    }
+    onLogoutClick() {
+        localStorage.setItem('loggedInUser', '');                
+    }
     render() {
+        const { loggedInUser } = this.state;
         const authContent =
             <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                 {/* <!-- Sidebar Toggle (Topbar) --> */}
@@ -170,7 +191,7 @@ class NavbarTop extends Component {
                                 Activity Log
                             </a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="/#" data-toggle="modal" data-target="#logoutModal">
+                            <a className="dropdown-item" href="/login" onClick={() => this.onLogoutClick()}>
                                 <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
@@ -178,13 +199,16 @@ class NavbarTop extends Component {
                     </li>
                 </ul>
             </nav>
-            
+        const unauthContent = <div/>   
         return (
             <div>
-                {authContent}
+                {loggedInUser ? authContent : unauthContent}
             </div>
         )
     }
 }
 
-export default NavbarTop;
+// export default NavbarTop;
+export default withRouter(NavbarTop);
+
+  

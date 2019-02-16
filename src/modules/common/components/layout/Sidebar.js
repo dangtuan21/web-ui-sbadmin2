@@ -6,13 +6,20 @@ class Sidebar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            open: false
+            open: false,
+            loggedInUser: ''
         }
     }
 
+    componentDidMount() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        this.setState({
+            loggedInUser
+        });
+    }
     render() {
-        const { open } = this.state;
-        const authContent =
+        const { open, loggedInUser } = this.state;
+        const authContent = 
             <ul className={"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " + (open===true ? "toggled" : "")} id="accordionSidebar" role="navigation">
 
                 {/* <!-- /Sidebar - Brand --> */}
@@ -96,7 +103,7 @@ class Sidebar extends Component {
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Login Screens:</h6>
-                            <Link to="/login" className="collapse-item">Login</Link>
+                            {/* <Link to="/login" className="collapse-item">Login</Link> */}
                             <Link to="/register" className="collapse-item">Register</Link>
                             <Link to="/forgot-password" className="collapse-item">Forgot Password</Link>
                             <div className="collapse-divider"></div>
@@ -139,13 +146,12 @@ class Sidebar extends Component {
                     <button className="rounded-circle border-0" id="sidebarToggle" onClick={() => this.setState({ open: !open })} ></button>
                 </div>
             </ul>
+        const unauthContent = <div/>
         return (
             <div>
-                {authContent}
+                {loggedInUser ? authContent : unauthContent}
             </div>
         )
     }
 }
-
-// export default Sidebar;
 export default connect(null, null)(Sidebar);

@@ -2,8 +2,21 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            open: true,
+        }
+    }
+
+    // componentDidMount() {
+    //     const loggedInUser = localStorage.getItem('loggedInUser');
+    //     this.setState({
+    //         loggedInUser
+    //     });
+    // }
     render() {
-        const authContent =
+        const content =
         <div className="container-fluid">
                 {/* <!-- Page Heading --> */}
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -170,7 +183,7 @@ class Dashboard extends Component {
 
         return (
             <div>
-                {authContent}
+                {content}
             </div>
         )
     }

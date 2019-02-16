@@ -1,8 +1,24 @@
 import React, { Component } from "react";
 
 class Login extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            open: true,
+        }
+    }
+
+    componentDidMount() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        this.setState({
+            loggedInUser
+        });
+    }
+    onLoginClick() {
+        localStorage.setItem('loggedInUser', 'td');        
+    }
     render() {
-        const authContent =
+        const content =
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10 col-lg-12 col-md-9">
@@ -30,7 +46,7 @@ class Login extends Component {
                               <label className="custom-control-label" htmlFor="customCheck">Remember Me</label>
                             </div>
                           </div>
-                          <a href="index.html" className="btn btn-primary btn-user btn-block">
+                          <a href="/dashboard" className="btn btn-primary btn-user btn-block" onClick={() => this.onLoginClick()}>
                             Login
                           </a>
                           <hr/>
@@ -60,7 +76,7 @@ class Login extends Component {
 
         return (
             <div className="bg-gradient-primary min-h">
-                {authContent}
+                {content}
             </div>
         )
     }
