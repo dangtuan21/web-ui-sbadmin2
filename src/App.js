@@ -29,25 +29,28 @@ class App extends Component {
                                     <NavbarTop />
                                     <div id="page-wrapper" className="container-fluid">
                                         <Switch>
-                                            <Route path="/dashboard" component={Dashboard} />
+                                            <Route exact path="/" component={Dashboard} />
+                                        </Switch>
+                                        {/* <Switch>
+                                            <Route exact path="/dashboard" component={Dashboard} />
+                                        </Switch> */}
+                                        <Switch>
+                                            <Route exact path="/cards" component={Cards} />
                                         </Switch>
                                         <Switch>
-                                            <Route path="/cards" component={Cards} />
+                                            <Route exact path="/buttons" component={Buttons} />
                                         </Switch>
                                         <Switch>
-                                            <Route path="/buttons" component={Buttons} />
+                                            <Route exact path="/tables" component={Tables} />
                                         </Switch>
                                         <Switch>
-                                            <Route path="/tables" component={Tables} />
+                                            <Route exact path="/forms" component={Forms} />
                                         </Switch>
                                         <Switch>
-                                            <Route path="/forms" component={Forms} />
+                                            <Route exact path="/utilities-color" component={Colors} />
                                         </Switch>
                                         <Switch>
-                                            <Route path="/utilities-color" component={Colors} />
-                                        </Switch>
-                                        <Switch>
-                                            <Route path="/utilities-border" component={Borders} />
+                                            <Route exact path="/utilities-border" component={Borders} />
                                         </Switch>
                                     </div>
                                 </div>

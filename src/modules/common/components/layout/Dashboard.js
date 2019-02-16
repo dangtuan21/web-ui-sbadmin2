@@ -8,15 +8,16 @@ class Dashboard extends Component {
             open: true,
         }
     }
+    componentDidMount() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        this.setState({
+            loggedInUser
+        });
+    }
 
-    // componentDidMount() {
-    //     const loggedInUser = localStorage.getItem('loggedInUser');
-    //     this.setState({
-    //         loggedInUser
-    //     });
-    // }
     render() {
-        const content =
+        const { loggedInUser } = this.state;
+        const authContent =
         <div className="container-fluid">
                 {/* <!-- Page Heading --> */}
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -181,9 +182,10 @@ class Dashboard extends Component {
 
             </div>
 
+        const unauthContent = <div/>
         return (
             <div>
-                {content}
+                {loggedInUser ? authContent : unauthContent}
             </div>
         )
     }

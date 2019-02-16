@@ -46,7 +46,7 @@ class Login extends Component {
                               <label className="custom-control-label" htmlFor="customCheck">Remember Me</label>
                             </div>
                           </div>
-                          <a href="/dashboard" className="btn btn-primary btn-user btn-block" onClick={() => this.onLoginClick()}>
+                          <a href="/" className="btn btn-primary btn-user btn-block" onClick={() => this.onLoginClick()}>
                             Login
                           </a>
                           <hr/>
