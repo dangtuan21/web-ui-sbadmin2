@@ -15,7 +15,7 @@
     "less-watch-compiler": "^1.13.0",
     "lodash": "^4.17.10",
     "moment": "^2.22.0",
-    "mongoose": "^5.1.2",
+    "mongoose": "^5.7.5",
     "node-sass": "^4.11.0",
     "react": "^15.6.2",
     "react-addons-css-transition-group": "^15.6.2",
